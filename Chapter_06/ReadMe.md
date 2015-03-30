@@ -35,6 +35,25 @@ Here are some operators and there purpose are described below.
 |    or    | Boolean Or                        |  True or False = True  |
 
 
+We can do math operation like shown in the table
+
+````
+5 + 6
+````
+
+But most of the time we are interested doing a math operation on a variable and then assigning the same to the variable. There is a shortcut in python for doing this like most of the programming language.
+
+````
+x = 1
+x += 5
+````
+
+which means
+
+````
+x = 1
+x = x + 5
+````
 
 ## Evaluation Order ##
 ## Changing the order of Evaluation ##
