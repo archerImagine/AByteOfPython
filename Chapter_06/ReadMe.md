@@ -56,22 +56,43 @@ x = x + 5
 ````
 
 ## Evaluation Order ##
+
+What is the way this expression is evaluated `2 + 3 * 5`, Now if we remembered the [BODMAS](http://en.wikipedia.org/wiki/Order_of_operations) rule, we will do the multiplication.
+
+Shown below is the precedence table from low precedence to high, demonstrating which expression should be evaluated first. This is directly taken from [Python Reference ](https://docs.python.org/3/reference/expressions.html#operator-precedence)
+
+| S. No |                  Operator                 |      Description       |
+| :---: | :---------------------------------------- | :--------------------- |
+|   1   | lambda                                    | Lambda Expression      |
+|   2   | if-else                                   | Conditional Expression |
+|   3   | or                                        | Boolean OR             |
+|   4   | and                                       | Boolean AND            |
+|   5   | not x                                     | Boolean NOT            |
+|   6   | in, not in, is, is not, <, <=,>,>=, !=,== | Comparison, membership |
+|   7   |                                           | BitWise OR             |
+|   8   | ^                                         | BitWise XOR            |
+|   9   | &                                         | Bitwise AND            |
+|   10  | <<, >>                                    | shifts                 |
+|   11  | +, -                                      | Addition Subtraction   |
+|   12  | *, /, //, %                               | Multiplication         |
+|   13  | +x,-x, ~x                                 | plus, minus, bitwise   |
+|   14  | **                                        | Exponentiation         |
+|   15  | x[i]                                      | Subscription           |
+|   16  | (),[],{},                                 |                        |
+
+In place of remembering such a big list, it is always good to use parenthesis, for changing the order of evaluation.
+
 ## Changing the order of Evaluation ##
+
+To read an expression more readable we can use parenthesis, `2 + ( 3 * 4)`, which is easier to understand than `2 + 3 * 4`. Also care should be taken not to over do parenthesize like `(2 + (3 * 4))`. 
+
 ## Associativity ##
-## Expressions ##
 
-## Header Text ##
+Operators are usually associated from left to right, This means that operator of the same precedence will be evaluated from left to right.
 
-### Header Text ###
+This expression `2 + 4 + 5` will be evaluated as `(2 + 4) + 5`.
 
-### Header Text ###
-### Header Text ###
-### Header Text ###
-### Header Text ###
-### Header Text ###
-
-
-
+Some operators have right to left associativity. like `a = b = c` will be evaluated as `a = (b = c)`
 
 
 
