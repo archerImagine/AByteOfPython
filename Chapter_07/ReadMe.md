@@ -110,4 +110,6 @@ print "Done"
 
 ## The `continue ` statement ##
 
+The `continue ` statement is used in a loop, to indicate that exit the remaining line of code and continue from next loop iteration.
+
 
