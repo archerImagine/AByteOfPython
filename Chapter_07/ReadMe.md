@@ -14,4 +14,43 @@ These are achieved by the help of **Flow Control Statements.** There are 3 type 
 
 The `if` statement is used to check a condition, if the condition is **true**, we run a block of code statement (called `if` block), else we process another block of statement (called `else` block).
 
-The `else` clause is optional.
+The `else` clause is optional. Here is an example showing the use of `if` statements.
+
+````
+number = 23
+
+guess = int(raw_input('Enter an integer : '))
+
+if guess == number:
+    # New block starts here
+    print "Congratulations, you guessed it."
+    print "(but you do not win any prizes!)"
+elif guess < number:
+    # Another Block.
+    print "No, it is litte higher than that."
+else:
+    print "No, it is litte lower than that."
+print "Done"
+````
+Few things to note in the above code:-
+
+* The `if` statement in `if guess == number:` ends with a `:`, indicating that a block statement follows.
+* Each block of code is represented by a same level of indentation.
+* The `elif` statement combines the need of two separate `if-else - if-else` statements. Also saving unnecessary indentation.
+
+There is also a concept of nested `if` in which on `if` block is inside another `if` block.
+
+The minimal valid `if` statement is
+
+````
+if True:
+    print "Hello!"
+````
+
+## The `while` Statement ##
+
+The `while ` statement allows you to repeatedly execute a block of code as long as the condition is True. This is what we call a **looping** statement.
+
+A `while ` can also have an optional `else` statement.
+
+
