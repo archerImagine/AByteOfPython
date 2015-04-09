@@ -53,4 +53,61 @@ The `while ` statement allows you to repeatedly execute a block of code as long 
 
 A `while ` can also have an optional `else` statement.
 
+Here is an example of the use of `while ` statement:-
+
+````
+number = 23
+running = True
+
+while running:
+    guess = int(raw_input('Enter an integer : '))
+    if guess == number:
+        # New block starts here
+        print "Congratulations, you guessed it."
+        print "(but you do not win any prizes!)"
+        running = False
+    elif guess < number:
+        # Another Block.
+        print "No, it is litte higher than that."
+    else:
+        print "No, it is litte lower than that."
+else:
+    print "The while Loop is over."
+print "Done"    
+````
+The code is same as the last code, only difference being because of the `while` statement, the check for correct number can be run multiple time.
+
+The `else` block of the `while ` statement is executed after the `while ` block has completed. The `else` part will not be executed if `break ` from the `while ` loop.
+
+## The `for ` Loop ##
+
+The `for .. in` statement is another looping statement which iterates over a sequence of object.
+
+The `for .. in` loops also have an optional `else` block, which is executed at the end of the `for` loop but is not executed if we `break` from the `for` loop.
+
+Here is a sample `for` loop.
+
+````
+for i in range(1,5):
+    print i
+else:
+    print "The loop is over."
+````
+
+## The `break ` statement ##
+The `break` statement works like a explicit end to a loops, in addition to when the loop will manually exist.
+
+Here is an example of `break ` statement,
+
+````
+while True:
+    s = raw_input("Enter Something: ")
+    if s == "quit":
+        break
+    print "Length of the string is ", len(s)
+print "Done"
+````
+
+## The `continue ` statement ##
+
 
