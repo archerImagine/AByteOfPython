@@ -110,6 +110,17 @@ print "Done"
 
 ## The `continue ` statement ##
 
-The `continue ` statement is used in a loop, to indicate that exit the remaining line of code and continue from next loop iteration.
+The `continue ` statement is used in a loop, to indicate that exit the remaining line of code and continue from next loop iteration. A very simple example of this will be:-
+
+````
+while True:
+    s = raw_input("Enter Something : ")
+    if s == 'quit':
+        break
+    if len(s) < 3:
+        print 'Too Small '
+        continue
+    print 'Input is of sufficient length'
+````
 
 
