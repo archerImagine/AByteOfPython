@@ -92,6 +92,22 @@ print "Value of x is ", x
 
 ## Default Argument Value ##
 
+These feature is quite unique in Python, Suppose we want to have multiple arguments in a function, but not always we want to invoke the function with these many arguments, so when we do not invoke the function with these arguments, it should take some default values.
+
+We can specify the default arguments value for parameters by appending `=` with the default values.
+
+The default arguments value should be immutable i.e. it should not change.
+
+````
+def sayMessage(message,times=1):
+    print message * times
+
+sayMessage("Hello")
+sayMessage("World ",5)
+````
+
+The parameters at the end only can be assigned the default arguments values.
+
 ## Keyword Arguments ##
 
 ## VarArgs Arguments ##
