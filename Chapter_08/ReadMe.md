@@ -54,7 +54,41 @@ printMax(x,y)
 
 ## Local Variables ##
 
+The variable declared inside a function is called **local variables**, as it cannot be accessed outside the function. This is called **Scope** of the variable.
+
+If there is already a similar variable in the program, the local variable will take preference.
+
+Here is an example showing the use of local variable:-
+
+````
+x = 50
+
+def sampleFunction(x):
+    print "x is ", x
+    x = 2
+    print "Changed local x to ", x
+
+sampleFunction(x)
+print "x is still ", x  # X value does not changes here.
+````
+
 ## The `global ` statement ##
+
+In the previous segment, if we had to change the value of the `x` which is outside the function scope, we have to use the `global` keyword. This practice is not encouraged.
+
+Here is an example of use of `global`
+````
+x = 50
+
+def sampleFunction():
+    global x
+    print "x is ", x
+    x = 2
+    print "Changed global x to ", x
+
+sampleFunction()
+print "Value of x is ", x   
+````
 
 ## Default Argument Value ##
 
