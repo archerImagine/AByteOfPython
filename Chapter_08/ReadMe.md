@@ -110,8 +110,90 @@ The parameters at the end only can be assigned the default arguments values.
 
 ## Keyword Arguments ##
 
+Mostly we specify the arguments to function in the order in which there are mentioned in the function definition, But in python, we can specify the parameters while calling and assign values to them, so the order is not important. This is called keyword Arguments.
+
+````
+def sumNumbers(a,b,c,d,e):
+    print a,b,c,d,e # prints 4 5 6 2 3
+    return a +b +c +d +e
+
+print sumNumbers(4,5,6, e=3,d=2)
+```` 
+
+So combining Keyword Arguments and Default arguments we can pass some value and ignore others if they have default arguments.
+
+````
+def func(a,b=5,c = 10):
+    print "a is ",a, " and b is ", b, "and c is ", c
+
+func(3,7)   
+func(25,c=24)
+func(c=50,a=100)
+````
+
 ## VarArgs Arguments ##
+
+We might also need the arguments to be of variable length. This are called **VarArgs** Arguments.
+
+````
+def total(initial=5,*numbers,**keywords):
+    count = initial
+    print "numbers:",numbers
+    print "keywords", keywords
+    for number in numbers:
+        count += number
+    for key in keywords:
+        count += keywords[key]
+    return count
+
+print total(10,1,2,3,vegetables=50,fruits = 100)
+````
+
+* When we declared a starred parameter such as `*param`, then all the positional arguments from that points are collected in a tuple till the end.
+* When we declare a double starred parameter such as `**param`, then all the keyword arguments from that point till end is collected in a dictionary.
 
 ## The `return ` statement ##
 
+The `return ` statement are used to return the control back to the main program from a function, or to receive some values from a function.
+
+````
+def maximum(x,y):
+    if x > y:
+        return x
+    elif x == y:
+        return "The numbers are equal."
+    else:
+        return y
+
+print maximum(2,3)
+````
+
+Every function by default returns a `return None`, in the absence of a return statement.
+
 ## DocString ##
+
+Python has a feature formally called **documentation string.**, but most fondly called as **DocString.** It helps to understand the documentation of the function.
+
+This docstring is used in both the `help()` method and also the `__doc__` string.
+
+Here is an example.
+
+````
+def print_max(x,y):
+    """
+        Prints the Maximum of two numbers.
+        The two values must be integers.
+    """
+    # convert to integers, if possible
+    x = int(x)
+    y = int(y)
+    if x > y:
+        print x, "is maximum."
+    else:
+        print y, "is maximum."
+
+print_max(3,5)
+
+print print_max.__doc__
+help(print_max)
+````
