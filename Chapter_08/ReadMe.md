@@ -28,8 +28,29 @@ A Function can take parameters, which values are consumed by the function to pro
 
 Parameters are specified within the parentheses of the function definition separated by comma. When the function are invoked it has the arguments in the same order.
 
-The names given in the function definition is called parameters, and the value we supply which calling are called arguments.
+The names given in the function definition is called parameters, and the value we supply while calling are called arguments.
 
+Here is an example of the both:-
+
+````
+def printMax(a,b):
+    if a > b:
+        print a, " is maximum. "
+    elif a == b:
+        print a, " is equal to ", b
+    else:
+        print b, "is maximum"
+
+# Directly Pass the Literal Value
+
+printMax(3,4)
+
+x = 5
+y = 7
+
+# Pass the variable as arguments.
+printMax(x,y)
+````
 
 ## Local Variables ##
 
