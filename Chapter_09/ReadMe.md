@@ -38,12 +38,75 @@ Lets dissect the above code:-
 
 ## Byte-compiled .pyc files ##
 
+Importing modules is a very costly affair, so python has a trick to solve this problem. It creates a **Byte-Compiled ** files with extension as `.pyc` which is an intermediate form.
+
+So the `.pyc` is created during the first `import` statements, subsequent imports gets the `.pyc` file.
+
+The `.pyc` files are platform-independent.
+
 ## The `from ... import ` statement ##
+
+We can also use statement like
+
+````
+from sys import argv
+````
+
+which will avoid writing `sys.` every time we want to access `argv`, but this will also prevent from having a local variable with the name `argv`.
+
+So `import` statement are the suggested way to import, as we will avoid name clashes.
 
 ## A module's name ##
 
+Every module have a name and statements in a modules can find out the name of their module.
+
+Consider the below code:-
+
+````
+if __name__ == '__main__':
+    print "This is run by itself."
+else:
+    print "This is being imported."
+````
+
+Every Python module has a `__name__` defines, if its name is `__main__` that implies that its is run standalone, else it is being imported.
+
 ## Making your own modules ##
 
+Each `.py` is a module, and we can import it using its filename.
+
+We even use the dot notation to access the members of the imported modules, which is very pythonic.
+
+we can also use 
+
+````
+from mymodule import *
+````
+
+which will import all the public names, but not the private members.
 ## The `dir` function ##
 
+We can use the `dir` function to list the identifiers that an object defines.
+
+When we supply a name to `dir()`, it returns all the public interface. When we do not supply a name to `dir()` it gives public interface of the current module.
+
+Consider the below code:-
+
+````
+import sys
+
+print dir(sys)
+
+a = 5
+print dir()
+
+del a
+
+print dir()
+````
+
+We use the `del` keyword to delete a variable.
+
 ## Packages. ##
+
+Modules are organized into packages. Packages are just folders with a special file called `init.py`
