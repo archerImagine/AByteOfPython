@@ -110,3 +110,11 @@ We use the `del` keyword to delete a variable.
 ## Packages. ##
 
 Modules are organized into packages. Packages are just folders with a special file called `init.py`
+
+## Further Reading ##
+
+To read further about the `from sys import...` options kindly read these
+
+* [Reddit | Difference between "from module import *" and "import module"?](http://www.reddit.com/r/learnpython/comments/1q1z2s/difference_between_from_module_import_and_import/)
+* [Reddit | Difference between "import ____" and "from ___ import *"](http://www.reddit.com/r/learnpython/comments/22vs9c/difference_between_import_and_from_import/)
+* [StackOverflow | Python import X or from X import Y? (performance)](http://stackoverflow.com/questions/3591962/python-import-x-or-from-x-import-y-performance)
