@@ -109,7 +109,7 @@ We use the `del` keyword to delete a variable.
 
 ## Packages. ##
 
-Modules are organized into packages. Packages are just folders with a special file called `init.py`
+Modules are organized into packages. Packages are just folders with a special file called `init.py`.
 
 ## Further Reading ##
 
