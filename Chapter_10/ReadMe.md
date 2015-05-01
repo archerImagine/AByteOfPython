@@ -84,4 +84,19 @@ Sets are unordered collections of simple objects.
 
 To copy a set or object use the full slice operation.
 
+### Learning Table ###
+
+|       | Mutability | Brackets |  Ordered  |
+| ----- | :--------: | :------: | :-------- |
+| Tuple | immutable  |   `()`   | Ordered   |
+| List  |  Mutable   |   `[]`   | Ordered   |
+| Dict  |  Mutable   |   `{}`   | UnOrdered |
+| Set   |  Mutable   |   `{}`   | UnOrdered |
+
+This question my help to remember these different factors
+
+* [What are some mnemonics to remember list, tuple, dictionary and sets](http://www.reddit.com/r/learnpython/comments/34azxe/what_are_some_mnemonics_to_remember_listtuple/)
+
+
+
 
