@@ -10,3 +10,4 @@ This repo is for the notes from the book [A Byte of Python](http://www.swaroopch
 4. [Chapter 08 | Functions](Chapter_08/ReadMe.md)
 5. [Chapter 09 | Modules](Chapter_09/ReadMe.md)
 6. [Chapter 10 | Data Structures](Chapter_10/ReadMe.md)
+7. [Chapter 11 | Problem Solving ](Chapter_11/ReadMe.md)
