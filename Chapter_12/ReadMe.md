@@ -56,5 +56,16 @@ Few things to note in the above code:-
 
 ## Methods ##
 
+Here is an example of Methods in action.
+
+````python
+class Person:
+    def sayHi(self):
+        print "Hello, How are you."
+
+p = Person()
+p.sayHi()
+````
+
 
 
