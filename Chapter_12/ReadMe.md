@@ -156,3 +156,13 @@ Robot.how_many()
 * Another way of accessing population is `self.__class__.population `
 * `how_many()` is a class method, we have marked `how_many()` with a decorator, which we will discuss in future.
 * All class members are by default public, with come exception. The naming rule being, the variable or methods which are not public should begin with `__`
+
+## Inheritance ##
+Code re-usability was always of concern for software development, so in the OOP world, **Inheritance** helps in this regards.
+
+Inheritance is just a type and a subtype relationship between classes. 
+
+We can have a **base class**, from with sub classes are derived, So this helps in code re-usability as, the sub classes does need to duplicate the code already present in the base class. Also change to base class are automatically reflected in the subclass.
+
+One more advantage is that we can pass the Base class, when we are not sure about with sub class should handle the situation, this is called **Polymorphism**.
+
