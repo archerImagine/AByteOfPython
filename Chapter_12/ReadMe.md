@@ -32,6 +32,29 @@ One important question remains, i.e. **how does self gets its value?**
 
 Consider this, we have a class called `MyClass` and an instance of this class called `myobject` . When we call a method on `myobject` instance, we call it using `myobject.method()`, this gets converted to `MyClass.method (myobject)`
 
+## Classes ##
+The most simplest class will be
+
+````python
+class Person(object):
+    pass # Empty Block
+
+p = Person()
+print p
+````
+
+gives a output:-
+
+````
+<__main__.Person object at 0x10d455a10>
+````
+
+Few things to note in the above code:-
+
+* Use the keyword `class` to create a class.
+* Instance is create just by calling the class name, as shown by `p = Person()`
+
+## Methods ##
 
 
 
