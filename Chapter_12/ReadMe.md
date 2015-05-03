@@ -17,3 +17,21 @@ Two main components are involved in a Objects, which is a instance of a Class.
     - **Instance Variables** : Variables which belongs to a particular object instances.
     - **Class Variables** : Variables which are shared across all the object instances.
 * **Methods**:- Object can also have functionality in addition to storing data, The functionality is provided by the function within a object which is called **Methods.**
+
+TODO: One question which we have to find answer is to is there any class methods or static methods.
+
+* [The definitive guide on how to use static, class or abstract methods in Python ](https://julien.danjou.info/blog/2013/guide-python-static-class-abstract-methods)
+
+## The `self` ##
+
+Methods are nothing but function inside a class, but it has one major difference than any other normal function. In a method definition, the first argument is always `self `, similar to `this ` in Java or C++.
+
+This first argument `self ` refers to the object itself and by convention it is called `self `, though we can name as anything but it is advisable to name it `self `.
+
+One important question remains, i.e. **how does self gets its value?**
+
+Consider this, we have a class called `MyClass` and an instance of this class called `myobject` . When we call a method on `myobject` instance, we call it using `myobject.method()`, this gets converted to `MyClass.method (myobject)`
+
+
+
+
