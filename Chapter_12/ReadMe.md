@@ -67,5 +67,92 @@ p = Person()
 p.sayHi()
 ````
 
+## The `init ` method ##
 
+There are some predefined methods of significance in python, `init` is one of them.
 
+`init` is executed as soon as the object of the class in instantiated. This method id useful to do only initialization. It starts with `__init__`
+
+Here is an example of `init` method
+
+````python
+class Person:
+    def __init__(self,name):
+        self.name = name
+    def say_Hi(self):
+        print "Hello, my name is ", self.name
+
+p = Person('ABCD')
+p.say_Hi()
+````
+Few things to note in the above code:-
+
+* `__init__` takes a argument `name`, we save this variable to the instance variable `name`, we know this is the instance variable because we invoke it by `self.name`
+* We never explicitly call `__init__`, but pass the parameter as a argument in the object creation time.
+* We can now use `self.name` in any of the class methods, like we have done in `say_Hi` method.
+
+## Class and Object Variables ##
+
+Field are nothing but variables which are bound to the class name space. As already mentioned there are two type of variables:-
+
+* **Class Variables**:
+* **Object / Instance Variables**:
+
+Lets consider the below code, for understand this:-
+
+````python
+class Robot(object):
+    """Represent a Robot with a string"""
+
+    # A class variable, counting the number of robots.
+    population = 0
+    def __init__(self, name):
+        """Initalize the data"""
+        self.name = name
+        print "(Initalizing {})".format(self.name)
+
+        # When this person is created, the robot 
+        # adds to the population
+        Robot.population += 1
+    def die(self):
+        """I am dying"""
+        print "{} is being destroyed ".format(self.name)
+        Robot.population -= 1
+        if Robot.population == 0:
+            print "{} was the last one ".format(self.name)
+        else:
+            print "There are still {:d} robots working".format(Robot.population)
+    def say_hi(self):
+        """Greetings by the robot
+            Yeah, they can do that
+        """
+
+        print "Greetings, my master call me {}".format(self.name)
+    @classmethod
+    def how_many(cls):
+        """prints the current population"""
+        print "We have {:d} robots".format(cls.population)
+
+droid1 = Robot("R2-D2")
+droid1.say_hi()
+Robot.how_many()
+
+droid2 = Robot("C-3P0")
+droid2.say_hi()
+Robot.how_many()
+
+print "\nRobots can do come work here.\n"
+print "\nRobots have done their work, so let's destroy them"
+
+droid1.die()
+droid2.die()
+
+Robot.how_many()
+````
+
+* `population ` is a class variable, which belongs to the `Robot` class.
+* `name ` is a instance variable, which belongs to the object.
+* `population ` is accessed by `Robot.population `, since it is a class variable, if we have both class and instance variable with the same name, then the instance variable take preference.
+* Another way of accessing population is `self.__class__.population `
+* `how_many()` is a class method, we have marked `how_many()` with a decorator, which we will discuss in future.
+* All class members are by default public, with come exception. The naming rule being, the variable or methods which are not public should begin with `__`
