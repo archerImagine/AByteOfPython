@@ -99,4 +99,11 @@ The call to `dump ` function,  writes the object into the file, this process is 
 
 Then the call to `load `, writes back the data from a file to the object, this process is called **unpickling**
 
+## Unicode  ##
+If we need to represent text, which are not in English we might need the unicode support, which starts with the letter `u`.
 
+When we have to transfer text over network, we generally convert it to `utf-8`, also when we deal with unicode in out code, we have to give this comment
+
+````
+# encoding=utf-8
+````
