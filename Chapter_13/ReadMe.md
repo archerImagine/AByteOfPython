@@ -71,3 +71,32 @@ The modes to open a file are:-
 * read mode `r`
 * write mode `w`
 * append mode `a`
+
+## Pickle ##
+
+`Pickle ` is a inbuilt python modules, which help in storing a object state into a file. This is what we call storing the object **Persistently**.
+
+here is the code 
+
+````python
+import pickle
+
+shoplistfile = '../data/shoplist.data'
+shoplist = ['apple','mango','carrot']
+
+f = open(shoplistfile,'wb')
+
+pickle.dump(shoplist,f)
+
+f.close()
+del shoplist
+
+f = open(shoplistfile,'rb')
+storedList = pickle.load(f)
+print "storedList: ", storedList
+````
+The call to `dump ` function,  writes the object into the file, this process is generally called **pickling.**
+
+Then the call to `load `, writes back the data from a file to the object, this process is called **unpickling**
+
+
