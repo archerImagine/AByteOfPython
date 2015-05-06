@@ -85,3 +85,12 @@ except ShortInputException as ex:
 else:
     print "No Exception was raised."
 ````
+
+In the above code, we have made our own exception which is `ShortInputException`, and then in the `try` block we raise that exception, if the condition is true.
+
+## Try .. Finally ##
+We are reading a file inside the try block, and till now what we have seen are error handlers and `else` condition, but what about a condition, irrespective of what happens, the book has to be closed `finally`.
+
+This is achieved from `finally` block.
+
+Consider the below example.
