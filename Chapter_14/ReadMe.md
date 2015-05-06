@@ -94,3 +94,48 @@ We are reading a file inside the try block, and till now what we have seen are e
 This is achieved from `finally` block.
 
 Consider the below example.
+
+````python
+import sys,time
+
+f = None
+
+try:
+    f = open("poems.txt")
+
+    while True:
+        line = f.readline()
+        if len(line) == 0:
+            break
+        print line,
+        sys.stdout.flush()
+        print "Press Ctrl + C now"
+
+        time.sleep(2)
+except IOError:
+    print "Could Not find file poems.txt"
+except KeyboardInterrupt:
+    print "!! You cancelled the reading from the file."
+finally:
+    if f:
+        f.close()
+    print "Cleaning up: Closed the file"
+````
+
+In the above code, we are trying to open a file name `poems.txt`, if the file is present we will print the lines in the files, and there is a sleep, during this time, we can press `CTRL + C`, so we can check, even there is an exception, `finally` block is executed and the file is closed.
+
+## The with Statement ##
+
+The previous example of opening a file in `try` block and closing the file in `finally ` block, is a very common pattern. Hence we can use the `with` statement which is much cleaner.
+
+Consider this code:-
+
+````python
+with open('poems.txt') as f:
+    for line in f:
+        print line,
+````
+When we use the `with` statement, we have two things to note.
+
+* It always calls `thefile.enter` before the block is executed.
+* It always calls `thefile.exit` after finishing the block.
