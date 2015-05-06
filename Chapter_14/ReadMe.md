@@ -20,3 +20,13 @@ SyntaxError: invalid syntax
 ````
 
 As you can see a `SyntaxError` is raised.
+
+## Exceptions ##
+
+Consider the below code:-
+
+````python
+s = raw_input("Enter Something -----> ")
+````
+
+When the console is waiting to receive keys, press `Ctril + D`, we will get a `EOFError` which is really an exceptional situation.
