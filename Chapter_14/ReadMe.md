@@ -57,3 +57,31 @@ What we are doing in the above code is:-
     - There should be atleast on `except ` block.
 * If the program does not handle the errors, it will be done by python default handlers.
 * The `else` clause is executed when not error occurs.
+
+## Raising Exception ##
+
+We can also raise our own exception, for situation which are unique to our program, this can be done by using `raise ` statement, providing it with a name of exception and the object.
+
+This new exception we we are throwing should be a derived class of `Exception `.
+
+Here is an example of raising the exception.
+
+````python
+class ShortInputException(Exception):
+    """A User defined exception class."""
+    def __init__(self, length,atleast):
+        Exception.__init__(self)
+        self.length = length
+        self.atleast = atleast
+
+try:
+    text = raw_input('Enter Something -----> ')
+    if len(text) < 3:
+        raise ShortInputException(len(text),3)
+except EOFError:
+    print "Why did you do an EOF on me? "
+except ShortInputException as ex:
+    print "ShortInputException: The input was {0} long, expected atleast {1}".format(ex.length,ex.atleast)
+else:
+    print "No Exception was raised."
+````
