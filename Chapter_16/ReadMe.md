@@ -42,3 +42,16 @@ Some special methods are mentioned below:-
 * `lt(self,other) : ` Called when less than operator is used.
 * `getitem()` : Called when `x[key]` indexing operation is used.
 * `len(self) : ` Called when built in `len()` function is invoked.
+
+## Single Statement Blocks. ##
+
+We a conditional statement like `if` has just one statement to execute we can have it in the same line as the condition inplace of an indentation.
+
+````
+flag = True
+
+if flag: print "true"
+````
+
+Though this is not a recommended practice, we can use it for debugging.
+
