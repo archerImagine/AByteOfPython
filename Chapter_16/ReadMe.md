@@ -26,3 +26,19 @@ a,b = b,a
 
 print a,b
 ````
+
+## Special Methods ##
+There are some methods, which have special meaning. Like `init ` and `del `. Special methods are used to mimic some special behavior from a class.
+
+Like if we want a behavior like `x[item]` from our own class, we have to implement a special method called `getitem()`.
+
+To find a list of such special methods we can go to [manual ](https://docs.python.org/2/reference/datamodel.html#special-method-names).
+
+Some special methods are mentioned below:-
+
+* `init(self)` : This method is called just before newly created object is returned for usage.
+* `del(self)` : Called just before an object is destroyed.
+* `str(self) :` Called when we use `print ` statement or when `str()` is used.
+* `lt(self,other) : ` Called when less than operator is used.
+* `getitem()` : Called when `x[key]` indexing operation is used.
+* `len(self) : ` Called when built in `len()` function is invoked.
