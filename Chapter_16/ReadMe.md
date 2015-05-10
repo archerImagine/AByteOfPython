@@ -55,3 +55,15 @@ if flag: print "true"
 
 Though this is not a recommended practice, we can use it for debugging.
 
+## Lambda Forms ##
+
+A Lambda statement is used to create a new function objects. Essentially `Lambda` takes a parameters followed by a single expression which actually becomes the body of the function.
+
+````
+points = [{'x':2, 'y':3}, {'x':4, 'y': 1}]
+
+print points
+
+points.sort(key = lambda i: i['y'])
+print points
+````
