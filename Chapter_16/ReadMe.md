@@ -95,3 +95,6 @@ print powersum(2,3,4)
 
 Because of `*` prefix on `args`, all the extra arguments are stored as a tuple. If a `**` prefix had been used instead, the extra arguments will be considers key/value pair of a dictionary.
 
+## The `assert ` statement ##
+
+The `assert ` statement is used to assert is something is true.
