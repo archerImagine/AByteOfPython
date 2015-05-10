@@ -77,3 +77,21 @@ listTwo = [2*i for i in listOne if i > 2]
 
 print listOne, listTwo
 ````
+
+## Receiving Tuples and Dictionaries from Function. ##
+There is a special way of receiving parameters to a function as a tuple or a dictionary.
+
+Consider the below example:-
+````
+def powersum(power, *args):
+    """Returns  the sum of each argument raised to the specified power"""
+    total = 0
+    for x in args:
+        total += pow(x,power)
+    return total
+
+print powersum(2,3,4)
+````
+
+Because of `*` prefix on `args`, all the extra arguments are stored as a tuple. If a `**` prefix had been used instead, the extra arguments will be considers key/value pair of a dictionary.
+
