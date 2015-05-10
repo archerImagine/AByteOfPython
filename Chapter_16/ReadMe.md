@@ -67,3 +67,13 @@ print points
 points.sort(key = lambda i: i['y'])
 print points
 ````
+
+## List Comprehension ##
+List Comprehension are a way to create a new list from an existing list. Consider the below example.
+
+````
+listOne = [2,3,4]
+listTwo = [2*i for i in listOne if i > 2]
+
+print listOne, listTwo
+````
