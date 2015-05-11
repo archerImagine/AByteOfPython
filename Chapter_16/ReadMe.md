@@ -98,3 +98,19 @@ Because of `*` prefix on `args`, all the extra arguments are stored as a tuple. 
 ## The `assert ` statement ##
 
 The `assert ` statement is used to assert is something is true.
+
+````
+mylist = ['item']
+
+assert len(mylist) >= 1
+
+mylist.pop()
+
+assert len(mylist) >= 1
+````
+
+The second assertion fails.
+
+## Decorators. ##
+
+
